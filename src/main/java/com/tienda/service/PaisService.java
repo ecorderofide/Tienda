@@ -4,6 +4,12 @@
  */
 package com.tienda.service;
 
+import com.tienda.entity.Pais;
+import com.tienda.repository.PaisRepository;
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 /**
  *
  * @author ecord
@@ -16,4 +22,10 @@ public class PaisService implements IPaisService{
     //@Override
     //public Lsit<Pais> listCountry(){
     //return (List<Pais>)paisRepository.findAll();
+
+    @Override
+    public List<Pais> listCountry() {
+        
+        return (List<Pais>)paisRepository.findAll();
+    }
 }
